@@ -14,7 +14,7 @@ const firebaseConfig = {
 if (!getApps.length) {
     initializeApp(firebaseConfig);
     if (typeof window !== "undefined") {
-        if ("measurmentId" in firebaseConfig) {
+        if ("measurementId" in firebaseConfig) {
             getAnalytics();
         }
     }
