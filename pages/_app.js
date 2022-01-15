@@ -1,7 +1,7 @@
-import { AuthUserProvider } from '../context/AuthUserContext';
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return <AuthUserProvider><Component {...pageProps} /></AuthUserProvider>
+  return <Component {...pageProps} />
 }
 
 export default MyApp
