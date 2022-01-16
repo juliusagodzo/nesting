@@ -1,0 +1,38 @@
+1) signin (DONE)
+	endPoint:	"/login"
+	input:		(form JSX)
+					email: mail@example.com,
+					password: "*******"
+	output:		""
+					route: "/"
+
+2) login (DONE)
+	endpoint:	"/login"
+	input:		(form JSX)
+					mail: mail@example.com,
+					password: "*******"
+	output:		""
+					route: "/authenticated"
+
+3) logout (DONE)
+	endpoint:	"/authenticated"
+	input:		()
+					userUid: "sXqU5oQpMZX6W7y7BXsDNUkr3c03"
+	output:		""
+					route: "/"
+
+4) getCondomini (TO DO)
+	endpoint:	"/authenticated/{userType}"
+	input:		(session{email: mail@example.com, password: "*******"}+?userType)
+	output:		condomini[]
+
+5) setCondiminio (TO DO)
+	endpoint:	"/authenticated/{userType}"
+	input:		(session{email: mail@example.com, password: "*******"}+?userType+condomini[uid].info)
+	output:		"operazione eseguita correttamente"
+
+6) getAssemblea (TO DO)
+	endpoint:	"/authenticated/{userType}"
+	input:		(session{email: mail@example.com, password: "*******"}+?userType)
+	output:		"condomini[uid].assemblea"
+	
