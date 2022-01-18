@@ -15,7 +15,7 @@ import {
   Button,
   Heading,
   useToast,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 
 export default function Login({ props }) {
   firebaseClient();
@@ -55,7 +55,7 @@ export default function Login({ props }) {
           <Button
             minWidth="40%"
             variant="solid"
-            variantColor="blue"
+            colorScheme="blue"
             isDisabled={email === "" || pass === ""}
             onClick={async () => {
               await firebase
@@ -81,7 +81,7 @@ export default function Login({ props }) {
           <Button
             minWidth="40%"
             variant="solid"
-            variantColor="green"
+            colorScheme="green"
             isDisabled={email === "" || pass === ""}
             onClick={async () => {
               await firebase

@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useAuth } from "../auth";
 import Container from "../components/Container";
-import { Flex, Box, Button, Text, Stack, Heading } from "@chakra-ui/core";
+import { Flex, Box, Button, Text, Stack, Heading } from "@chakra-ui/react";
 export default function Home() {
   const { user } = useAuth();
 
@@ -25,7 +25,7 @@ export default function Home() {
           >
             <Button
               variant="solid"
-              variantColor="blue"
+              colorScheme="blue"
               width="100%"
               isDisabled={!user}
             >
@@ -35,7 +35,7 @@ export default function Home() {
             </Button>
             <Button
               variant="solid"
-              variantColor="green"
+              colorScheme="green"
               width="100%"
               isDisabled={user}
             >

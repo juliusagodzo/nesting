@@ -3,7 +3,7 @@ import nookies from "nookies";
 import { verifyIdToken } from "../firebaseAdmin";
 import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
-import { Box, Flex, Text, Heading, Button } from "@chakra-ui/core";
+import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
 function Authenticated({ session }) {
   firebaseClient();
   if (session) {
@@ -23,7 +23,7 @@ function Authenticated({ session }) {
             <Button
               width="100%"
               variant="solid"
-              variantColor="red"
+              colorScheme="red"
               onClick={async () => {
                 await firebase.auth().signOut();
                 window.location.href = "/";
